@@ -1,6 +1,16 @@
 <h1>Pingpong</h1>
-<form action="/pingpongform" method="post">
-  <label for="input-form">Enter a number</label>
-  <input id="input-form" name="input-form" type="number">
+<form action="/" method="post">
+  <label for="input-num">Enter a number</label>
+  <input id="input-num" name="input-num" type="number">
   <button type="submit">Let's play PingPong!</button>
 </form>
+
+@if(@Model.Count > 0)
+{
+  <ul>
+    @foreach(var element in @Model)
+    {
+      <li>@element</li>
+    }
+  </ul>
+}

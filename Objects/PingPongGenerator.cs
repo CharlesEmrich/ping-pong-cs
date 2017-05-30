@@ -12,12 +12,12 @@ namespace PingPong.Objects
       for (int index = 1; index <= input; index ++)
         {
           string element = "";
-          // if (index % 3 == 0) {
-          // element += "Ping";
-          // }
-          // if (index % 5 == 0) {
-          // element += "Pong";
-          // }
+          if (index % 3 == 0) {
+          element += "Ping";
+          }
+          if (index % 5 == 0) {
+          element += "Pong";
+          }
           if (element == "") {
           element = index.ToString();
           }

@@ -9,7 +9,12 @@ namespace PingPong
     public HomeModule()
     {
       Get["/"] = _ => {
-        return View["pingpong.cshtml"];
+        List<string> model = new List<string> {};
+        return View["pingpong.cshtml", model];
+      };
+      Post["/"] = _ => {
+        List<string> newList = PingPongGenerator.Generate(int.Parse(Request.Form["input-num"]));
+        return View["pingpong.cshtml", newList];
       };
     }
   }
